@@ -29,7 +29,7 @@ const modals = () => {
                 }
 
                 // Убирать элемент, по которому делается клик
-                if (destroy) {
+                if (destroy == 'true') {
                     key.remove();
                 }
                 
