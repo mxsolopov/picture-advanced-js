@@ -33,7 +33,6 @@ const modals = () => {
                     key.remove();
                 }
                 
-
                 modal.style.display = 'block';
                 // Плавное появление
                 modal.classList.add('animated', 'fadeIn');
