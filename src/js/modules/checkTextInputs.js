@@ -5,7 +5,7 @@ const checkTextInputs = (selector) => {
 
     // Перебор всех инпутов
     textInputs.forEach(item => {
-        // Отслеживание нажатия кнопки
+        // Отслеживание нажатия клавиш клавиатуры
         item.addEventListener('keypress', function(e) {
             // Допускать введение только киррилицы и цифр
             if (e.key.match(/[^а-яё 0-9]/ig)) {
