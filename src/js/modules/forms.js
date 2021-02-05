@@ -1,4 +1,5 @@
 import closeModals from './closeModals';
+import {postData} from '../services/requests'; // Функция отправки данных на сервер
 
 // Отправка данных форм на сервер
 const forms = () => {
@@ -27,16 +28,6 @@ const forms = () => {
 
     // // Валидация полей с телефоном (ввод только цифр)
     // checkNumInputs('input[name="user_phone"]');
-
-    // Функция для отправки запроса на сервер
-    const postData = async (url, data) => {
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
-
-        return await res.text();
-    };
 
     // Очистка инпутов
     const clearInputs = () => {
