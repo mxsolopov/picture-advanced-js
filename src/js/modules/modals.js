@@ -1,6 +1,7 @@
 import closeModals from './closeModals';
 import calcScroll from './calcScroll';
 
+// Работа модальных окон
 const modals = () => {
 
     // Индикатор кликов на кнопки

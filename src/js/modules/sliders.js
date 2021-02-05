@@ -1,3 +1,4 @@
+// Слайдер
 const sliders = (slides, dir, prev, next) => {
 
     // Индекс показываемого вначале слайда

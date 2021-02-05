@@ -1,3 +1,4 @@
+// Проверка ввода киррилицы и цифр
 const checkTextInputs = (selector) => {
 
     // Набор инпутов

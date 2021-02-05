@@ -1,5 +1,6 @@
 import closeModals from './closeModals';
 
+// Отправка данных форм на сервер
 const forms = () => {
 
     // Получение всех форм с инпутами
