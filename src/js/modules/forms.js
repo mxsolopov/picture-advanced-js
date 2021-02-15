@@ -2,11 +2,12 @@ import closeModals from './closeModals';
 import {postData} from '../services/requests'; // Функция отправки данных на сервер
 
 // Отправка данных форм на сервер
-const forms = () => {
+const forms = (details) => {
 
     // Получение всех форм с инпутами
     const form = document.querySelectorAll('form'),
           input = document.querySelectorAll('input'),
+          textarea = document.querySelectorAll('textarea'),
           popup = document.querySelectorAll('[data-modal]'),
           upload = document.querySelectorAll('[name="upload"]');
 
@@ -31,10 +32,17 @@ const forms = () => {
 
     // Очистка инпутов
     const clearInputs = () => {
+
         // Очистка текстовых инпутов
         input.forEach(item => {
             item.value = '';
         });
+
+        // Очистка текстовых полей
+        textarea.forEach(item => {
+            item.value = '';
+        });
+
         // Очистка метки загруженных файлов
         upload.forEach(item => {
             item.previousElementSibling.textContent = 'Файл не выбран';
@@ -60,6 +68,8 @@ const forms = () => {
     form.forEach( item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            console.log(details);
             
             // Создание блока для вывода статуса отправки формы
             let statusMessage = document.createElement('div'),
@@ -89,6 +99,13 @@ const forms = () => {
 
             // Объект с данными формы
             const formData = new FormData(item);
+
+            // Добавление деталей заказа к отправляемой форме
+            if(item.getAttribute('data-order') === 'simple-order') {
+                for (let key in details) {
+                    formData.append(key, details[key]);
+                }
+            }
 
             // Переменная будет хранить путь для отправки данных
             let api;
