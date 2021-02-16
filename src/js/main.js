@@ -4,9 +4,8 @@ import forms from './modules/forms';
 import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
-import calc from './modules/calc';
-import changeFormDetails from './modules/changeFormDetails';
 import createOrderData from './modules/createOrderData';
+import filter from './modules/filter';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -24,4 +23,5 @@ window.addEventListener('DOMContentLoaded', () => {
     checkTextInputs('[name="message"]');
     showMoreStyles('#styles .row', '.button-styles');
     createOrderData(formDetails);
+    filter();
 });
