@@ -1,21 +1,18 @@
-const changeFormDetails = (details) => {
+const changeFormDetails = (size, material, options, promocode, details) => {
 
     // Поля деталей оформления заказа
-    const clientSize = document.querySelectorAll('#size'),
-          clientMaterial = document.querySelectorAll('#material'),
-          clientOption = document.querySelectorAll('#options'),
-          clientPromocode = document.querySelectorAll('.promocode');
+    const clientSize = document.querySelector(size),
+          clientMaterial = document.querySelector(material),
+          clientOption = document.querySelector(options),
+          clientPromocode = document.querySelector(promocode);
 
     
     // Функция записывает в объект formDetails данные, которые не попали в formData
     function bindActionToObj(elem, event, prop) {
 
-        elem.forEach((item) => {
-
-            // Отсеживать ввод данных
-            item.addEventListener(event, () => {
-                details[prop] = item.value;
-            });
+        // Отсеживать ввод данных
+        elem.addEventListener(event, () => {
+            details[prop] = elem.value;
         });
     }
 

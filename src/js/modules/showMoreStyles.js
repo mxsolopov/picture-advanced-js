@@ -8,8 +8,8 @@ const showMoreStyles = (wrapper, trigger) => {
     
     // Получение и обработка данных при клике на кнопку-триггер
     btn.addEventListener('click', function() {
-        getResource('http://localhost:3000/styles')
-            .then(res => createCards(res))
+        getResource('assets/db.json')
+            .then(res => createCards(res.styles))
             .catch(error => console.log(error));
 
         // Убрать кнопку-триггер

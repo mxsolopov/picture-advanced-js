@@ -14,7 +14,7 @@ const getResource = async (url) => {
 
     // Сообщение об ошибке
     if (!res.ok) {
-        throw new Error(`Could not fetch ${url}, status: ${res.status}`)
+        throw new Error(`Could not fetch ${url}, status: ${res.status}`);
     }
 
     return await res.json();

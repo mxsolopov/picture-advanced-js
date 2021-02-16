@@ -6,6 +6,7 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import changeFormDetails from './modules/changeFormDetails';
+import createOrderData from './modules/createOrderData';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -17,11 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
     modals();
     sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
     sliders('.main-slider-item', 'vertical');
-    changeFormDetails(formDetails);
     forms(formDetails);
     mask('[name="phone"]');
     checkTextInputs('[name="name"]');
     checkTextInputs('[name="message"]');
     showMoreStyles('#styles .row', '.button-styles');
-    calc('#size', '#material', '#options', '.promocode', '.calc-price', formDetails);
+    createOrderData(formDetails);
 });
