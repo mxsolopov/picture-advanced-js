@@ -27,5 +27,5 @@ window.addEventListener('DOMContentLoaded', () => {
     createOrderData(formDetails);
     filter();
     pictureSize('.sizes-block');
-    accordion('.accordion-heading', '.accordion-block');
+    accordion('.accordion-heading');
 });

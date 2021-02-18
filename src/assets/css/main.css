@@ -914,10 +914,21 @@ h4 {
   display: block;
 }
 .often-questions .accordion-block {
-  display: none;
-  margin-top: 1rem;
   background-color: #f7e7e6;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  /* padding: 3rem 4rem;
+  display: none;
+  margin-top: 1rem; */
+}
+.often-questions .accordion-block.active-content {
+  opacity: 1;
+  overflow: visible;
   padding: 3rem 4rem;
+  display: block;
+  margin-top: 1rem;
 }
 .often-questions .accordion-block:before {
   content: '';
