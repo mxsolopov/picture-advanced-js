@@ -6,6 +6,7 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import createOrderData from './modules/createOrderData';
 import filter from './modules/filter';
+import pictureSize from './modules/pictureSize';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -24,4 +25,5 @@ window.addEventListener('DOMContentLoaded', () => {
     showMoreStyles('#styles .row', '.button-styles');
     createOrderData(formDetails);
     filter();
+    pictureSize('.sizes-block');
 });
